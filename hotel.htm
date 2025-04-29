@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <header class="bg-white shadow-lg py-4 sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between px-4">
             <!-- Logo -->
@@ -21,36 +22,294 @@
                 <span class="text-2xl font-bold">Rich Hotel</span>
             </a>
 
-            <!-- Mobile Menu Button (Hidden on larger screens) -->
-            <div class="md:hidden">
-                <button id="menu-toggle"
-                    class="text-gray-800 hover:text-primary focus:outline-none transition-colors duration-300">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Desktop Navigation (Hidden on smaller screens) -->
-            <nav class="hidden md:block">
-                <ul class="flex space-x-8">
-                    <li><a href="#" class="hover:text-primary transition-colors duration-300">Home</a></li>
-                    <li><a href="#" class="hover:text-primary transition-colors duration-300">Contact</a></li>
-                    <li><a href="#" id="services-dropdown-toggle"
-                            class="bg-black hover:bg-secondary text-white px-4 py-2 rounded-md transition-colors duration-300">Get
-                            Started</a>
-                        <ul
-                            class="absolute left-0 hidden group-hover:block bg-white shadow-md py-2 mt-1 rounded-md w-48 transition-all duration-300">
-                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Login</a></li>
-                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Register</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
         </div>
 
     </header>
+    <nav class="flex flex-wrap items-center justify-between p-3 bg-[#e8e8e5]">
+        <div class="text-xl"></div>
+        <div class="flex md:hidden">
+            <button id="hamburger">
+              <img class="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40" height="40" />
+              <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40" height="40" />
+            </button>
+        </div>
+        <div class=" toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none">
+            <a href="#home" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Home
+            </a>
+            <a href="#services" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Services
+            </a>
+            <a href="#aboutus" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">About us
+            </a>
+            <a href="#gallery" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Gallery
+            </a>
+            <a href="#contactUs" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Visit Us
+            </a>
+        </div>
+    
+        <div class="toggle w-full text-end hidden md:flex md:w-auto px-2 py-2 md:rounded">
+            <a href="tel:+123">
+                <div class="flex justify-end">
+                    <div class="flex items-center h-10 w-30 rounded-md bg-[#c8a876] text-white font-medium p-2">
+                        <!-- Heroicon name: phone -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                        </svg>
+                        Call now
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+    </nav>
+    <!-- hero seciton -->
+    <div class="relative w-full h-[320px]" id="home">
+        <div class="absolute inset-0 opacity-70">
+            <img src="https://i.pinimg.com/736x/d5/5a/ae/d55aaecf546d7ac3aa221b160dbe214b.jpg" alt="Background Image" class="object-cover object-center w-full h-full" />
+        </div>
+        <div class="absolute inset-9 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-4 md:mb-0">
+                <h1 class="text-grey-700 font-medium text-4xl md:text-5xl leading-tight mb-2">Rich Hotel</h1>
+                <p class="font-regular text-xl mb-8 mt-4">You deserve this!</p>
+                <a href="#contactUs"
+                    class="px-6 py-3 bg-[#c8a876] text-white font-medium rounded-full hover:bg-[#c09858]  transition duration-200">Contact
+                    Us</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- our services section -->
+    <section class="py-10" id="services">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://glamorous-design.org/wp-content/uploads/2024/11/piclumen-1731932590678.png" alt="wheat flour grinding"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-medium text-gray-800 mb-2">Comfortable Rooms</h3>
+                        <p class="text-gray-700 text-base">Experience comfort and elegance in our well-appointed rooms, featuring plush bedding, modern amenities, and breathtaking views. Your perfect retreat awaits.
+
+                        </p>
+                    </div>
+                </div>
+            <!-- special card -->
+            <div
+            class="bg-white rounded-lg bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg overflow-hidden min-h-full">
+            <div class="text-center text-white font-medium">Special service</div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcXKQw4m885BgzQbYygItbI8id0tDEtQAYLQ&s" alt="Coffee"
+                class="w-full h-64 object-cover rounded-t-lg">
+            <div class="p-6 bg-white text-center rounded-b-lg md:min-h-full">
+                <h3 class="text-xl font-medium text-gray-800 mb-2">"Inner self" Space</h3>
+                <p class="text-gray-700 text-base">
+                    Escape into tranquility in our serene meditation space. Designed for ultimate relaxation, it’s the perfect place to unwind, recharge, and find inner peace.
+                </p>
+            </div>
+        </div>   
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://media.cnn.com/api/v1/images/stellar/prod/160502155618-terranea-vista-pool.jpg?q=w_1600,h_900,x_0,y_0,c_fill" alt="Coffee"
+                        class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-medium text-gray-800 mb-2">Great Pool</h3>
+                        <p class="text-gray-700 text-base">Dive into serenity in our crystal-clear pool, surrounded by lush landscapes and inviting loungers. Whether for a refreshing swim or a relaxing sunbath, it's pure bliss.
+                        
+                        </p>
+                    </div>
+                </div>
+                
+    
+            </div>
+        </div>
+    </section>
+    
+    <!-- about us -->
+    <section class="bg-gray-100" id="aboutus">
+        <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                <div class="max-w-lg">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">About Us</h2>
+                    <p class="mt-4 text-gray-600 text-lg">
+                        Welcome to Rich Hotel!, where comfort meets elegance in the heart of Guba, Azerbaijan!
+
+                        At Rich Hotel, we are dedicated to providing an unforgettable stay with world-class hospitality, luxurious accommodations, and personalized service. Whether you're here for business or leisure, our hotel offers a serene escape with modern amenities, stylish rooms, and top-tier facilities, including a stunning pool, fine dining, and a relaxing spa.
+                        
+                        Conveniently located near Budug district, we ensure that your stay is both relaxing and filled with adventure. From the moment you arrive, our team is here to make your experience seamless, memorable, and truly special.
+                        
+                        Experience the perfect blend of comfort and sophistication at Rich Hotel—your home away from home.</p>
+                </div>
+                <div class="mt-12 md:mt-0">
+                    <img src="https://www.karismahotels.com/_next/image?url=https%3A%2F%2Fadmin.karismahotels.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fhero_desktop%2Fpublic%2F2024-11%2Farchitecture_exterior_azul_beach_negril_6.jpg%3Fitok%3DfBtjKRxR&w=3840&q=75" alt="About Us Image" class="object-cover rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- why us  -->
+    <section class="text-gray-700 body-font mt-10">
+        <div class="flex justify-center text-3xl font-bold text-gray-800 text-center">
+            Why Us?
+        </div>
+        <div class="container px-5 py-12 mx-auto">
+            <div class="flex flex-wrap text-center justify-center">
+                <div class="p-4 md:w-1/4 sm:w-1/2">
+                    <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                        <div class="flex justify-center">
+                            <img src="https://image3.jdomni.in/banner/13062021/58/97/7C/E53960D1295621EFCB5B13F335_1623567851299.png?output-format=webp" class="w-32 mb-3">
+                        </div>
+                        <h2 class="title-font font-regular text-2xl text-gray-900">Luxurious Design</h2>
+                    </div>
+                </div>
+    
+                <div class="p-4 md:w-1/4 sm:w-1/2">
+                    <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                        <div class="flex justify-center">
+                            <img src="https://image2.jdomni.in/banner/13062021/3E/57/E8/1D6E23DD7E12571705CAC761E7_1623567977295.png?output-format=webp" class="w-32 mb-3">
+                        </div>
+                        <h2 class="title-font font-regular text-2xl text-gray-900">Reasonable Rates</h2>
+                    </div>
+                </div>
+    
+                <div class="p-4 md:w-1/4 sm:w-1/2">
+                    <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                        <div class="flex justify-center">
+                            <img src="https://image3.jdomni.in/banner/13062021/16/7E/7E/5A9920439E52EF309F27B43EEB_1623568010437.png?output-format=webp" class="w-32 mb-3">
+                        </div>
+                        <h2 class="title-font font-regular text-2xl text-gray-900">Fast Service</h2>
+                    </div>
+                </div>
+    
+                <div class="p-4 md:w-1/4 sm:w-1/2">
+                    <div class="px-4 py-6 transform transition duration-500 hover:scale-110">
+                        <div class="flex justify-center">
+                            <img src="https://image3.jdomni.in/banner/13062021/EB/99/EE/8B46027500E987A5142ECC1CE1_1623567959360.png?output-format=webp" class="w-32 mb-3">
+                        </div>
+                        <h2 class="title-font font-regular text-2xl text-gray-900">Kind Staff</h2>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <!-- gallery -->
+    <section class="text-gray-700 body-font" id="gallery">
+        <div class="flex justify-center text-3xl font-bold text-gray-800 text-center py-10">
+            Gallery
+        </div>
+    
+        <div class="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+    
+            <div class="group relative">
+                <img
+          src="https://www.taferresorts.com/cms/resources/home/hotel-mousai-l-w768h1024.webp"
+          alt="Image 1"
+          class="aspect-[2/3] h-80 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+        />
+            </div>
+    
+            <div class="group relative">
+                <img
+          src="https://www.1hotels.com/sites/1hotels.com/files/styles/card/public/brandfolder/kkmmbmqpc8gmjtgffsgwnhw/RM655-01-_Ocean_Front_Kingh1320.png?h=22f6ab40&itok=AtB7dU9x"
+          alt="Image 1"
+          class="aspect-[2/3] h-80 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+        />
+            </div>
+    
+            <div class="group relative">
+                <img
+          src="https://media.cntraveler.com/photos/6583229cb5aa398657c3dd59/master/w_1600%2Cc_limit/The%2520retreat%2520costa%2520rica_TRCR_Luxury%2520Loft_4.jpg"
+          alt="Image 1"
+          class="aspect-[2/3] h-80 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+        />
+            </div>
+            <div class="group relative">
+                <img
+          src="https://www.luxewellnessclub.com/wp-content/uploads/2023/10/My-Arbor-Italy-Luxe-Wellness-Club.jpg"
+          alt="Image 1"
+          class="aspect-[2/3] h-80 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105"
+        />
+            </div>
+    
+    
+    
+            <!-- Repeat this div for each image -->
+        </div>
+    
+    </section>
+    
+    <!-- Visit us section -->
+    <section class="bg-gray-100">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:py-20 lg:px-8">
+            <div class="max-w-2xl lg:max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900" id="contactUs">Visit Our Location</h2>
+                <p class="mt-3 text-lg text-gray-500">Let us serve you the best</p>
+            </div>
+            <div class="mt-8 lg:mt-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="max-w-full mx-auto rounded-lg overflow-hidden">
+                            <div class="border-t border-gray-200 px-6 py-4">
+                                <h3 class="text-lg font-bold text-gray-900">Contact</h3>
+                                <p class="mt-1 font-bold text-gray-600"><a href="tel:+123">Phone: +994
+                                        123456789</a></p>
+                                <a class="flex m-1" href="tel:+919823331842">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="flex items-center justify-between h-10 w-30 rounded-md bg-indigo-500 text-white p-2">
+                                            <!-- Heroicon name: phone -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                            </svg>
+                                            Call now
+                                        </div>
+                                    </div>
+    
+                                </a>
+                            </div>
+                            <div class="px-6 py-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Address</h3>
+                                <p class="mt-1 text-gray-600">Guba district, Budug village</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden order-none sm:order-first">
+                        <iframe
+                            src="https://www.google.com/maps/place/Budug/@41.1831275,48.3674384,17z/data=!3m1!4b1!4m6!3m5!1s0x403785d5d0e40c8d:0x81a47643c40c9b8a!8m2!3d41.1826517!4d48.3702001!16s%2Fm%2F04ght8w?entry=ttu&g_ep=EgoyMDI1MDQyMy4wIKXMDSoASAFQAw%3D%3D"
+                            class="w-full" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <section>
+        <footer class="bg-gray-200 text-white py-4 px-3">
+            <div class="container mx-auto flex flex-wrap items-center justify-between">
+                <div class="w-full md:w-1/2 md:text-center md:mb-4 mb-8">
+                    <p class="text-xs text-gray-400 md:text-sm">Copyright 2025 &copy; All Rights Reserved</p>
+                </div>
+                <div class="w-full md:w-1/2 md:text-center md:mb-0 mb-8">
+                   
+                </div>
+            </div>
+        </footer>
+    </section>
+    
+    <script>
+        document.getElementById("hamburger").onclick = function toggleMenu() {
+            const navToggle = document.getElementsByClassName("toggle");
+            for (let i = 0; i < navToggle.length; i++) {
+              navToggle.item(i).classList.toggle("hidden");
+            }
+          };
+    </script>
 </body>
 
 </html>
